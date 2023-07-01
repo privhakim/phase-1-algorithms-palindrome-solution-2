@@ -1,9 +1,28 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  // writing a isPanlindrome function that returns either true or false
+  //that means if the first letter is the same as the last letter
+  //, and thee second letter is the same as the second to last letter,return true.
+  const lowercaseWord = word.toLowerCase();
+  let start = 0;
+  let end = lowercaseWord.length - 1;
+
+  while (start < end) {
+    if (lowercaseWord[start] !== lowercaseWord[end]) {
+      return false;
+    }
+    start++;
+    end--;
+  }
+
+  return true;
 }
 
 /* 
   Add your pseudocode here
+  iterate from the begining to the middle 
+   check each letter to the coressponding letter from the end
+   if any letter dont match , return false 
 */
 
 /*
